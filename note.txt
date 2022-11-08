@@ -1,0 +1,1 @@
+do là trang web chưa responsive nên là có thể vào các màn sẽ bị vỡ layout
