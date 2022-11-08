@@ -1,0 +1,46 @@
+.contact {
+    &-title {
+        text-align: center;
+        font-family: 'Jost', sans-serif !important;
+        background: #efd9b5;
+        height: 82px;
+        line-height: 80px;
+        font-size: 24px;
+        font-weight: 700;
+    }
+    &-top {
+        padding-top: 20px;
+        &-title {
+            text-align: center;
+            font-family: 'Jost', sans-serif !important;
+        }
+    }
+    &-group-from-controll {
+        padding: 50px 15px;
+    }
+    &-form-controll {
+        border: 1px solid;
+        display: block;
+        width: 335px;
+        padding: 15px 15px;
+    }
+    &-textarea-controll {
+        outline: none;
+        padding-top: 10px;
+        padding-left: 15px;
+    }
+    &-form-btn {
+        font-family: 'Jost', sans-serif !important;
+        text-transform: uppercase;
+        width: 180px;
+        height: 46px;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 500;
+        background: #0000004f;
+        transition: linear 0.3s;
+        &:hover {
+            background-color: #ff2020;
+        }
+    }
+}

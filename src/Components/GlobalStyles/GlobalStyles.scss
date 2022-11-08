@@ -1,0 +1,49 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap');
+:root {
+    --text-color: #333;
+    //? DefaultLayout
+    --bgc-link-item:#17231636;
+    --bgc-white:#fff;
+    --bgc-light-red:#ff2020;
+    //!
+    --text-color-greyish:#74706B;
+    --text-color-light-red:#ff2020;
+    --text-color-rough-black:#292621;
+    --text-color-white:#fff;
+    --text-color-light-blue:#677f8b;
+    --text-color-light-white:#bbb9b5;
+    
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: 'Jost', sans-serif !important;
+    font-size: 1.6rem !important;
+    line-height: 1.5 !important;
+    text-rendering: optimizeSpeed !important;
+}
+
+button,
+input,
+select,
+textarea[tabindex] {
+    border: none;
+    outline: none;
+}
+
+a[href] {
+    text-decoration: none;
+    color: var(--text-color);
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+    font-family: Flaticon;
+    font-style: normal;
+}

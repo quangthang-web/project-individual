@@ -1,0 +1,28 @@
+.icon{
+    &__menu__icon{
+        display: flex; 
+        align-items: center;
+        list-style: none;
+    }
+    &__link__icon{
+        padding-bottom: 0;
+        padding-right: 15px;
+        margin-right: 10px;
+        position: relative;
+    }
+    &__chill__icon{
+        position: absolute;
+        color: var(--text-color-greyish);
+        transition: all .4s ease-out 0s;
+        &:hover{
+            color:var(--text-color-light-red);
+            transform: rotateY(180deg);
+        }
+    }
+    &__size{
+        font-size: 1.5rem;
+        margin-right: 10px;
+        display: block;
+        color: var(--text-color-light-blue);
+    }
+}

@@ -1,0 +1,49 @@
+.lastnew {
+    background: #f6f6f6;
+    padding-top: 80px;
+    padding-bottom: 29px;
+
+    &-blog {
+        width: 439px;
+        &:hover .lastnew-name-link {
+            color: #ff2020;
+        }
+    }
+    &-title {
+        font-size: 34px;
+        display: block;
+        font-weight: 500;
+        line-height: 1.4;
+        margin-bottom: 22px;
+    }
+    &-photo {
+        margin-bottom: 30px;
+    }
+    &-fashion {
+        text-align: left;
+        color: #74706b;
+        margin-bottom: 11px;
+        display: block;
+    }
+    &-name {
+        font-family: 'Jost', sans-serif;
+        color: #292621;
+        margin-top: 0px;
+        font-style: normal;
+        font-weight: 500;
+        &-link {
+            text-align: left;
+            font-size: 22px;
+            line-height: 1.4;
+            margin-bottom: 12px;
+            font-weight: 500;
+            display: block;
+        }
+    }
+    &-link {
+        display: block;
+        color: #292621 !important;
+        text-decoration: underline !important;
+        font-weight: 600;
+    }
+}

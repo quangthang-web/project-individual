@@ -1,0 +1,18 @@
+.about {
+    padding: 50px 25px;
+    &-title {
+        font-family: 'Jost', sans-serif !important;
+        font-weight: 600;
+        font-size: 24px;
+    }
+    &-text {
+        text-align: justify;
+        font-size: 14px;
+        line-height: 1.7857;
+        padding-right: 85px;
+        color: #888;
+    }
+    &-img {
+        width: 312px;
+    }
+}
