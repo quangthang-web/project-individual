@@ -3,7 +3,7 @@ import classNames from 'classnames/bind';
 
 import Tab from '../../Components/Tab';
 import Section from '../../Components/Section';
-import Sliders from '../../Components/Sliders';
+import Maylike from '../../Components/Maylike';
 import Lastnew from '../../Components/LastNew';
 
 import img from '../../asset/images';
@@ -46,7 +46,7 @@ function Home() {
             },
         ],
     };
-
+    
     return (
         <>
             <div className={cx('wapper')}>
@@ -179,7 +179,7 @@ function Home() {
                     </div>
                 </div>
                 <div className={cx('latest')}>
-                    <div className={cx('container')}>
+                    <div className={cx('container','p-0')}>
                         <div className={cx('row')}>
                             <div className={cx('latest-items')}>
                                 <Tab></Tab>
@@ -190,7 +190,7 @@ function Home() {
                     <div className={cx('container')}>
                         <div className={cx('row')}>
                             <div className={cx('section-sliders')}>
-                                <Sliders></Sliders>
+                                <Maylike></Maylike>
                             </div>
                         </div>
                     </div>

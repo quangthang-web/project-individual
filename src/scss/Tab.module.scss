@@ -97,6 +97,9 @@
                 &-text {
                     &-name_product {
                         color: #292621;
+                        &:hover{
+                            color: #ff2020;
+                        }
                     }
                     &-price {
                         color: #74706b;

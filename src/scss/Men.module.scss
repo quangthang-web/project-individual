@@ -1,7 +1,6 @@
 $border: #e7e7e7;
 
 .wrapper {
-    width: 1400px;
     margin: 0 auto;
 }
 
@@ -176,6 +175,9 @@ $border: #e7e7e7;
     &__name {
         text-align: center;
         position: relative;
+        &:hover{
+            color: #fb383b !important;
+        }
     }
 
     &__name::after {

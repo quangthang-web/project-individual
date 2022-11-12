@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import classNames from 'classnames/bind';
 
 import Men from './Men';
-// import NavTab from './NavTab';
 import Fashion from './Fashion';
-import Baby from './Baby';
 import Women from './Women';
 import styles from '../../scss/Tab.module.scss';
 const cx = classNames.bind(styles);
@@ -16,13 +14,9 @@ function Tab() {
     const women = () => {
         setActiveTab('tab2');
     };
-    const baby = () => {
+    const fashion = () => {
         setActiveTab('tab3');
     };
-    const fashion = () => {
-        setActiveTab('tab4');
-    };
-
     return (
         <>
             <div className={cx('latest-header', 'd-flex', 'justify-content-between')}>
@@ -41,11 +35,8 @@ function Tab() {
                                 <li className={cx(activeTab === 'tab2' ? 'active' : '', 'latest-link')} onClick={women}>
                                     Women
                                 </li>
-                                <li className={cx(activeTab === 'tab3' ? 'active' : '', 'latest-link')} onClick={baby}>
-                                    Baby
-                                </li>
                                 <li
-                                    className={cx(activeTab === 'tab4' ? 'active' : '', 'latest-link')}
+                                    className={cx(activeTab === 'tab3' ? 'active' : '', 'latest-link')}
                                     onClick={fashion}
                                 >
                                     Fashion
@@ -56,8 +47,7 @@ function Tab() {
                 </div>
             </div>
             <div className={cx('latest-bottom')}>
-                {activeTab === 'tab1' ? <Men /> : activeTab === 'tab2' ? <Fashion /> : activeTab === 'tab3' ? <Baby /> :  <Women /> }
-
+                {activeTab === 'tab1' ? <Men /> : activeTab === 'tab2' ? <Women /> : activeTab === 'tab3' ? <Fashion /> : '' }
             </div>
         </>
     );

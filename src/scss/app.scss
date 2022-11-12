@@ -1,6 +1,12 @@
-@import "~bootstrap/scss/bootstrap";
+@import '~bootstrap/scss/bootstrap';
+@import './DefaultLayout.module';
+@import './Header.module';
+@import './Footer.module';
 @import './Home.module';
 @import './Tab.module';
 @import './Section.module';
 @import './Lastnew.module';
 @import './Contact.module';
+@import './Login.module';
+@import './Details.module';
+@import './Cart.module';

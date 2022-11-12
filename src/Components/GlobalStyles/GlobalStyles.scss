@@ -4,17 +4,16 @@
 :root {
     --text-color: #333;
     //? DefaultLayout
-    --bgc-link-item:#17231636;
-    --bgc-white:#fff;
-    --bgc-light-red:#ff2020;
+    --bgc-link-item: #17231636;
+    --bgc-white: #fff;
+    --bgc-light-red: #ff2020;
     //!
-    --text-color-greyish:#74706B;
-    --text-color-light-red:#ff2020;
-    --text-color-rough-black:#292621;
-    --text-color-white:#fff;
-    --text-color-light-blue:#677f8b;
-    --text-color-light-white:#bbb9b5;
-    
+    --text-color-greyish: #74706b;
+    --text-color-light-red: #ff2020;
+    --text-color-rough-black: #292621;
+    --text-color-white: #fff;
+    --text-color-light-blue: #677f8b;
+    --text-color-light-white: #bbb9b5;
 }
 * {
     box-sizing: border-box;
@@ -43,7 +42,10 @@ a[href] {
     text-decoration: none;
     color: var(--text-color);
 }
-[class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+[class^='flaticon-']:before,
+[class*=' flaticon-']:before,
+[class^='flaticon-']:after,
+[class*=' flaticon-']:after {
     font-family: Flaticon;
     font-style: normal;
 }

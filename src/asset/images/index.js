@@ -9,6 +9,7 @@ const img = {
     logoLatest_2: require('./gallery/xlatest1.jpg.pagespeed.ic.9LywwGvNeR.webp'),
     logoLatest_3: require('./gallery/xlatest3.jpg.pagespeed.ic.weRwbGvwtF.webp'),
     logoLatest_4: require('./gallery/xlatest2.jpg.pagespeed.ic.wreJQIyLHL.webp'),
+    logoLatest_5: require('./gallery/81f90b95db74eff609228b72df084243.jpg'),
     maylike_1: require('./may-like/xlatest5.jpg.pagespeed.ic.WuUZFTYF8g.webp'),
     maylike_2: require('./may-like/xlatest6.jpg.pagespeed.ic.Gs5H8uF_0V.webp'),
     maylike_3: require('./may-like/xlatest7.jpg.pagespeed.ic.hx4jI0dHK5.webp'),
@@ -33,6 +34,9 @@ const img = {
     women_2: require('./women/women_2.jfif'),
     women_3: require('./women/women_3.jfif'),
     women_4: require('./women/women_4.jfif'),
+    women_5: require('./women/b4b53932f50c0b58abf36bc909b6ff1e.jpg'),
+    women_6: require('./women/d403e3dc1b91aeae3affc745e4c6a29a.jpg'),
+    women_7: require('./women/c076a37545492d87ba7b766d6d61c006.jfif'),
     other_1: require('./other/loi-khuyen-thoi-trang-a.jpg'),
 }
 export default img;

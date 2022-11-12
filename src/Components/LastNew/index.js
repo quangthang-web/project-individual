@@ -6,6 +6,7 @@ import styles from '../../scss/Lastnew.module.scss';
 const cx = classNames.bind(styles);
 
 function Lastnew() {
+    
     return (
         <div className={cx('lastnew')}>
             <h1 className={cx('lastnew-title')}>Latest News</h1>

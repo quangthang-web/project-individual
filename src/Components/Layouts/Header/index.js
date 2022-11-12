@@ -4,11 +4,10 @@ import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import Icons from '../../Icon';
 
-import styles from './Header.module.scss';
+import styles from '../../../scss/Header.module.scss';
 import img from '../../../asset/images';
 import { faCartShopping, faMagnifyingGlass, faUser } from '@fortawesome/free-solid-svg-icons';
 const cx = classNames.bind(styles);
-
 function Header() {
     return (
         <div className={cx('wapper')}>
@@ -80,7 +79,7 @@ function Header() {
                             </li>
                             <li className={cx('header__bottom__item__menu')}>
                                 <Link to="/About" className={cx('header__bottom__link__menu-item', 'size__link__menu')}>
-                                About
+                                    About
                                 </Link>
                             </li>
                             <li className={cx('header__bottom__item__menu')}>
@@ -101,21 +100,21 @@ function Header() {
                                 </a>
                             </li>
                             <li className={cx('header__bottom__menu-right')}>
-                                <a href="#top" className={cx('header__bottom__link-right')}>
+                                <Link to="/login" className={cx('header__bottom__link-right')}>
                                     <FontAwesomeIcon className={cx('icon')} icon={faUser} />
-                                </a>
+                                </Link>
                             </li>
                             <li className={cx('header__bottom__menu-right')}>
-                                <a href="#top" className={cx('header__bottom__link-right')}>
+                                <Link to="/cart" className={cx('header__bottom__link-right')}>
                                     <span className={cx('total')}>1</span>
                                     <FontAwesomeIcon className={cx('icon')} icon={faCartShopping} />
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </nav>
                 </div>
                 <div className={cx('border-bottom', 'border-dark')}></div>
-                
+
                 {/* <form className={cx('form_search')}>
                     <input type="text" className={cx('search_input')} placeholder="Search here" />
                 </form> */}

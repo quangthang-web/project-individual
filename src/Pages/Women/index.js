@@ -2,8 +2,8 @@ import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faStar, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { women } from '../../ApiFake';
 
-import img from '../../asset/images';
 import styles from '../../scss/Men.module.scss';
 const cx = classNames.bind(styles);
 
@@ -12,6 +12,7 @@ function Women() {
         <>
             <div className={cx('wrapper')}>
                 <h2 className={cx('contact-title')}>Women</h2>
+                <div className={cx("container",'pt-0')}>
                 <div className={cx('shop')}>
                     <div className={cx('shop__side__bar')}>
                         <div className={cx('side__bar__search')}>
@@ -79,18 +80,19 @@ function Women() {
 
                     <div className={cx('shop__product')}>
                         <div className={cx('shop__product__list')}>
-                            <div className={cx('shop__product__item')}>
+                        {women.map((women,index)=>(
+                            <div className={cx('shop__product__item')} key={index}>
                                 <span className={cx('shop__product__item__new', `bg-color-color`)}>New</span>
                                 <div className={cx('shop__product__item__thumb')}>
-                                    <img src={img.women_1} alt="" />
+                                    <img src={women.img} alt="" />
                                     <span className={cx('shop__product__item__view')}>
                                         <Link to="/#">Xem lướt qua</Link>
                                     </span>
                                 </div>
-                                <h3 className={cx('shop__product__item__name', 'm-0', 'mt-3')}>Áo thun rộng</h3>
+                                <h3 className={cx('shop__product__item__name', 'm-0', 'mt-3')}>{women.name}</h3>
                                 <div className={cx('shop__product__item__info')}>
                                     <div className={cx('shop__product__item__total')}>
-                                        <span>$300</span>
+                                        <span>${women.cost}</span>
                                         <ul className={cx('shop__product__item__rate')}>
                                             <li>
                                                 <FontAwesomeIcon className={cx()} icon={faStar}></FontAwesomeIcon>
@@ -104,183 +106,11 @@ function Women() {
                                     </div>
                                 </div>
                             </div>
-                            <div className={cx('shop__product__item')}>
-                                <span className={cx('shop__product__item__new', `bg-color-color`)}>New</span>
-                                <div className={cx('shop__product__item__thumb')}>
-                                    <img src={img.women_2} alt="" />
-                                    <span className={cx('shop__product__item__view')}>
-                                        <Link to="/#">Xem lướt qua</Link>
-                                    </span>
-                                </div>
-                                <h3 className={cx('shop__product__item__name', 'm-0', 'mt-3')}>Quần JEAN BASIC SUÔNG Unisex N7</h3>
-                                <div className={cx('shop__product__item__info')}>
-                                    <div className={cx('shop__product__item__total')}>
-                                        <span>$300</span>
-                                        <ul className={cx('shop__product__item__rate')}>
-                                            <li>
-                                                <FontAwesomeIcon className={cx()} icon={faStar}></FontAwesomeIcon>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div className={cx('shop__product__item--add__cart')}>
-                                        <Link to="/#">
-                                            <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className={cx('shop__product__item')}>
-                                <span className={cx('shop__product__item__new', `bg-color-color`)}>New</span>
-                                <div className={cx('shop__product__item__thumb')}>
-                                    <img src={img.women_3} alt="" />
-                                    <span className={cx('shop__product__item__view')}>
-                                        <Link to="/#">Xem lướt qua</Link>
-                                    </span>
-                                </div>
-                                <h3 className={cx('shop__product__item__name', 'm-0', 'mt-3')}>Bộ đồ thể thao nữ chất thun Umi cao cấp</h3>
-                                <div className={cx('shop__product__item__info')}>
-                                    <div className={cx('shop__product__item__total')}>
-                                        <span>$300</span>
-                                        <ul className={cx('shop__product__item__rate')}>
-                                            <li>
-                                                <FontAwesomeIcon className={cx()} icon={faStar}></FontAwesomeIcon>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div className={cx('shop__product__item--add__cart')}>
-                                        <Link to="/#">
-                                            <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className={cx('shop__product__item')}>
-                                <span className={cx('shop__product__item__new', `bg-color-color`)}>New</span>
-                                <div className={cx('shop__product__item__thumb')}>
-                                    <img src={img.women_4} alt="" />
-                                    <span className={cx('shop__product__item__view')}>
-                                        <Link to="/#">Xem lướt qua</Link>
-                                    </span>
-                                </div>
-                                <h3 className={cx('shop__product__item__name', 'm-0', 'mt-3')}>Chân váy</h3>
-                                <div className={cx('shop__product__item__info')}>
-                                    <div className={cx('shop__product__item__total')}>
-                                        <span>$300</span>
-                                        <ul className={cx('shop__product__item__rate')}>
-                                            <li>
-                                                <FontAwesomeIcon className={cx()} icon={faStar}></FontAwesomeIcon>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div className={cx('shop__product__item--add__cart')}>
-                                        <Link to="/#">
-                                            <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className={cx('shop__product__item')}>
-                                <span className={cx('shop__product__item__new', `bg-color-color`)}>New</span>
-                                <div className={cx('shop__product__item__thumb')}>
-                                    <img src={img.women_1} alt="" />
-                                    <span className={cx('shop__product__item__view')}>
-                                        <Link to="/#">Xem lướt qua</Link>
-                                    </span>
-                                </div>
-                                <h3 className={cx('shop__product__item__name', 'm-0', 'mt-3')}>Áo thun rộng</h3>
-                                <div className={cx('shop__product__item__info')}>
-                                    <div className={cx('shop__product__item__total')}>
-                                        <span>$300</span>
-                                        <ul className={cx('shop__product__item__rate')}>
-                                            <li>
-                                                <FontAwesomeIcon className={cx()} icon={faStar}></FontAwesomeIcon>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div className={cx('shop__product__item--add__cart')}>
-                                        <Link to="/#">
-                                            <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className={cx('shop__product__item')}>
-                                <span className={cx('shop__product__item__new', `bg-color-color`)}>New</span>
-                                <div className={cx('shop__product__item__thumb')}>
-                                    <img src={img.women_2} alt="" />
-                                    <span className={cx('shop__product__item__view')}>
-                                        <Link to="/#">Xem lướt qua</Link>
-                                    </span>
-                                </div>
-                                <h3 className={cx('shop__product__item__name', 'm-0', 'mt-3')}>Quần JEAN BASIC SUÔNG Unisex N7</h3>
-                                <div className={cx('shop__product__item__info')}>
-                                    <div className={cx('shop__product__item__total')}>
-                                        <span>$300</span>
-                                        <ul className={cx('shop__product__item__rate')}>
-                                            <li>
-                                                <FontAwesomeIcon className={cx()} icon={faStar}></FontAwesomeIcon>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div className={cx('shop__product__item--add__cart')}>
-                                        <Link to="/#">
-                                            <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className={cx('shop__product__item')}>
-                                <span className={cx('shop__product__item__new', `bg-color-color`)}>New</span>
-                                <div className={cx('shop__product__item__thumb')}>
-                                    <img src={img.women_3} alt="" />
-                                    <span className={cx('shop__product__item__view')}>
-                                        <Link to="/#">Xem lướt qua</Link>
-                                    </span>
-                                </div>
-                                <h3 className={cx('shop__product__item__name', 'm-0', 'mt-3')}>Bộ đồ thể thao nữ chất thun Umi cao cấp</h3>
-                                <div className={cx('shop__product__item__info')}>
-                                    <div className={cx('shop__product__item__total')}>
-                                        <span>$300</span>
-                                        <ul className={cx('shop__product__item__rate')}>
-                                            <li>
-                                                <FontAwesomeIcon className={cx()} icon={faStar}></FontAwesomeIcon>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div className={cx('shop__product__item--add__cart')}>
-                                        <Link to="/#">
-                                            <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className={cx('shop__product__item')}>
-                                <span className={cx('shop__product__item__new', `bg-color-color`)}>New</span>
-                                <div className={cx('shop__product__item__thumb')}>
-                                    <img src={img.women_4} alt="" />
-                                    <span className={cx('shop__product__item__view')}>
-                                        <Link to="/#">Xem lướt qua</Link>
-                                    </span>
-                                </div>
-                                <h3 className={cx('shop__product__item__name', 'm-0', 'mt-3')}>Chân váy</h3>
-                                <div className={cx('shop__product__item__info')}>
-                                    <div className={cx('shop__product__item__total')}>
-                                        <span>$300</span>
-                                        <ul className={cx('shop__product__item__rate')}>
-                                            <li>
-                                                <FontAwesomeIcon className={cx()} icon={faStar}></FontAwesomeIcon>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div className={cx('shop__product__item--add__cart')}>
-                                        <Link to="/#">
-                                            <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
+                                
+                            ))}
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
         </>

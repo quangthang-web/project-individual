@@ -1,0 +1,52 @@
+.cart {
+    padding: 0px 0 50px;
+    &-table {
+        width: 100%;
+        margin-bottom: 30px;
+        border-spacing: 23px;
+        border-collapse: separate;
+    }
+    &-table tbody tr td {
+        padding-left: 20px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        vertical-align: middle;
+        align-self: center;
+    }
+    &-product {
+        border-radius: 8px;
+        box-shadow: inset 2px 2px 4px #d1d9e6, inset -2px -2px 4px #f9f9f9;
+    }
+    &-delete {
+        width: 55px;
+        height: 27px; 
+        font-family: 'Jost';
+        border-radius: 4px;
+        background: #ff2020;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+    }
+    &-pay {
+        text-align: right;
+    }
+    &-total {
+        font-weight: 700;
+        font-family: 'Jost';
+        font-size: 17px;
+        margin-bottom: 15px;
+        span{
+            color: #ff2020;
+        }
+    }
+    &-btn {
+        width: 113px;
+        height: 45px;
+        font-family: 'Jost';
+        border-radius: 11px;
+        background: #ff2020;
+        color: #fff;
+        font-size: 19px;
+        font-weight: 700;
+    }
+}

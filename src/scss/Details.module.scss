@@ -1,0 +1,162 @@
+$txt: #fff;
+$bg-color: #ff2020;
+$pd: 28px;
+
+.wrapper {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.detail {
+    width: inherit;
+    display: flex;
+
+    &__content {
+        width: inherit;
+        display: flex;
+        background-color: $bg-color;
+        padding: $pd 80px;
+
+        &__img {
+            margin-right: 50px;
+            width: 312px;
+            height: 347px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__info {
+            margin-top: calc(72px - $pd);
+
+            &__title {
+                font-weight: 400;
+                color: $txt;
+                font-size: 40px;
+                line-height: 1.2;
+                margin-bottom: 9px;
+            }
+
+            &__author {
+                font-size: 14px;
+                line-height: 1.5;
+                color: $txt;
+                margin-bottom: 30px;
+            }
+
+            &__price {
+                font-weight: 500;
+                color: $txt;
+                font-size: 32px;
+                margin-bottom: 9px;
+                display: block;
+            }
+
+            &__rate {
+                display: flex;
+
+                &-icon i {
+                    font-size: 16px;
+                    color: $txt;
+                }
+
+                &-count {
+                    color: $txt;
+                    font-size: 13px;
+                    margin: auto 0;
+                    padding-left: 3px;
+                }
+            }
+
+            &__act {
+                margin-top: 32px;
+                display: flex;
+                button {
+                    background-color: $txt;
+                    padding: 18px 40px;
+                    border-radius: 30px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    position: relative;
+                    overflow: hidden;
+
+                    &::before {
+                        content: '';
+                        display: block;
+                        background-color: $bg-color;
+                        width: 0;
+                        height: 100%;
+                        border-radius: 30px;
+                        font-weight: 600;
+                        cursor: pointer;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        cursor: pointer;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: all 0.4s ease;
+                    }
+
+                    &:hover::before {
+                        content: attr(data-foo);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        opacity: 1;
+                        visibility: visible;
+                        color: $txt;
+                        box-shadow: 0px 3px 31px 2px rgb(207 207 207 / 70%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.tabs {
+    width: inherit;
+
+    &__list {
+        display: flex;
+        list-style: none;
+        margin-top: 80px;
+        margin-bottom: 46px;
+    }
+
+    &__item {
+        font-size: 16px;
+        display: block;
+        padding: 0 12px 36px;
+        margin-right: 15px;
+        cursor: pointer;
+        position: relative;
+
+        &.active {
+            color: $bg-color;
+            &::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: $bg-color;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+
+    &__content {
+     padding-left: 50px;
+     padding-right: 50px;
+        p {
+            margin-bottom: 15px;
+        }
+    }
+}

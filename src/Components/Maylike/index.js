@@ -1,17 +1,16 @@
 import React, { useRef } from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from 'react-router-dom';
-import { men } from '../../../ApiFake';
+import { faCartPlus, faHeart, faMagnifyingGlassPlus } from '@fortawesome/free-solid-svg-icons';
 
-import styles from '../../../scss/Tab.module.scss';
+import {maylike} from '../../ApiFake';
+import styles from '../../scss/Tab.module.scss';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { faCartPlus, faHeart, faMagnifyingGlassPlus } from '@fortawesome/free-solid-svg-icons';
 const cx = classNames.bind(styles);
 
-function Men() {
+function Sliders() {
     const ref = useRef({});
     const next = () => {
         ref.current.slickNext();
@@ -22,12 +21,12 @@ function Men() {
     };
 
     const setting = {
+        dots: false,
         arrows: false,
         infinite: true,
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 1,
-        autoplaySpeed: 3000,
         responsive: [
             {
                 breakpoint: 1198,
@@ -45,9 +44,9 @@ function Men() {
             },
         ],
     };
-
     return (
         <>
+            <h1 className={cx('slider-title')}>You May Like</h1>
             <div className={cx('latest-bottom-items-btn')}>
                 <button className={cx('latest-bottom-items-btn-prev')} onClick={prev}>
                     &lsaquo;
@@ -59,12 +58,16 @@ function Men() {
 
             <div className={cx('latest-bottom-img')}>
                 <Slider ref={ref} {...setting}>
-                    {men.slice(0,5).map((men, index) => (
+                    {maylike.map((maylike, index) => (
                         <div className={cx('latest-bottom-img-box')} key={index}>
                             <div className={cx('latest-bottom-img-box-photo')}>
-                                <Link to="/details">
-                                    <img src={men.img} className={cx('latest-bottom-img-box-photo-avarta')} alt="" />
-                                </Link>
+                                <a href="#top">
+                                    <img
+                                        src={maylike.img}
+                                        className={cx('latest-bottom-img-box-photo-avarta')}
+                                        alt=""
+                                    />
+                                </a>
                                 <div className={cx('latest-bottom-img-box-text-icon')}>
                                     <a href="#top" className={cx('latest-bottom-img-box-text-icon_product', 'd-block')}>
                                         <FontAwesomeIcon icon={faCartPlus} />
@@ -80,13 +83,13 @@ function Men() {
                             <div className={cx('latest-bottom-img-box-text')}>
                                 <div className={cx('latest-bottom-img-box-text-name', 'pt-5')}>
                                     <a href="#top" className={cx('latest-bottom-img-box-text-name_product', 'd-block')}>
-                                        {men.name}
+                                       {maylike.name}
                                     </a>
                                 </div>
                                 <div className={cx('latest-bottom-img-box-text-price', 'pt-3')}>
-                                    ${men.promotional_price}
+                                    ${maylike.promotional_price}
                                     <span>
-                                        &nbsp;&nbsp; <del> $ {men.cost}</del>
+                                        &nbsp;&nbsp; <del> ${maylike.cost}</del>
                                     </span>
                                 </div>
                             </div>
@@ -98,4 +101,4 @@ function Men() {
     );
 }
 
-export default Men;
+export default Sliders;

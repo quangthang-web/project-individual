@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import RouteLink from './Routes';
 import { DefaultLayout } from './Components/Layouts';
@@ -10,6 +11,11 @@ function App() {
                     {RouteLink.map((route, index) => {
                         const Page = route.component;
                         let Layout = DefaultLayout;
+                        if (route.layout) {
+                            Layout = route.layout;
+                        } else if (route.layout === null) {
+                            Layout = Fragment;
+                        }
                         return (
                             <Route
                                 key={index}

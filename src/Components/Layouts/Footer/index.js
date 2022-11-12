@@ -2,7 +2,7 @@ import classNames from 'classnames/bind';
 
 import img from '../../../asset/images';
 import Icons from '../../Icon';
-import styles from './Footer.module.scss';
+import styles from '../../../scss/Footer.module.scss';
 
 const cx = classNames.bind(styles);
 
